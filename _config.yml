@@ -1,14 +1,14 @@
 # Site settings
-name: 董小姐
-location: 大连
-company: IBM
-position: Java开发工程师
+name: 龚柯
+location: 杭州
+company: 新华移动
+position: 前端工程师
 github: https://github.com/
 facebook: https://www.facebook.com/
-phone: 1580424XXXX
-email: xxxx@xxx.com
+phone: 18768144918
+email: gongkegogogo@gmail.com
 
-baseurl: "/resume.io"
+baseurl: "/tok-gogogo.github.io"
 
 permalink: /:year/:month/:day/:title/
 
