@@ -1,110 +1,82 @@
-# Funday -- 个人简历模板
+# 介绍
 
-<a href='http://gitee.com/xiaodan_yu/resume.io/stargazers'><img src='http://gitee.com/xiaodan_yu/resume.io/badge/star.svg?theme=dark' alt='star'></img></a>
-<a href='http://gitee.com/xiaodan_yu/resume.io/members'><img src='http://gitee.com/xiaodan_yu/resume.io/badge/fork.svg?theme=dark' alt='fork'></img></a>
+[![Language](https://img.shields.io/badge/Jekyll-Theme-blue)](https://github.com/TMaize/tmaize-blog)
+[![license](https://img.shields.io/github/license/TMaize/tmaize-blog)](https://github.com/TMaize/tmaize-blog)
+[![GitHub stars](https://img.shields.io/github/stars/TMaize/tmaize-blog?style=social)](https://github.com/TMaize/tmaize-blog)
 
-## 名字释义
+一款 jekyll 主题（[GitHub 地址](https://github.com/TMaize/tmaize-blog)），简洁纯净(主题资源请求<20KB)，未引入任何框架，秒开页面，支持自适应，支持全文检索，支持夜间模式
 
-<strong>Funday</strong>，是星期八，开心Day的意思。以前很多玩笑都是说要等星期八才能实现，OK，Then it happened now!
+你可以到[TMaize Blog](http://blog.tmaize.net/)查看主题效果，欢迎添加友链
 
-希望每个人在使用了Funday之后在找工作的时候都是处在星期八，开开心心，快快乐乐，轻轻松松拿到心仪的多金的Offer！
+## 感谢
 
-## 使用方法
+[JetBrains](https://www.jetbrains.com/?from=tmaize-blog) 免费提供的开发工具[![JetBrains](./static/img/jetbrains.svg)](https://www.jetbrains.com/?from=tmaize-blog)
 
-1. 修改`_config.yml`文件中的内容
+[夜间模式代码高亮配色]](https://github.com/mgyongyosi/OneDarkJekyll)
 
-```
-# 个人名称或昵称
-name: xiaoxiao
-# 页面个人头像信息中地址展示信息
-location: 大连
-# 页面个人头像信息中公司展示信息
-company: IBM
-# 页面个人头像信息中职位展示信息
-position: Java开发工程师
-# 页面个人头像信息中GITHUB展示信息
-github: https://github.com/XXXX
-# 页面个人头像信息中Facebook展示信息
-facebook: https://www.facebook.com/XXXX
-# 页面个人头像信息中电话展示信息
-phone: 1580424XXXX
-# 页面个人头像信息中EMAIL展示信息
-email: xxxx@xxx.com
+# 本地运行
 
-#本项目的baseurl
-baseurl: "/resume.io"
-```
-
-2. 修改个人头像信息
-
-	修改 `_config.yml` 文件中内容
-
-3. 修改基本信息
- 
-	修改 `_includes/resumer_01-basic.html` 文件中内容
-
-4. 修改职业技能
-
-    修改 `_includes/resumer_02-profetional.html` 文件中内容
-
-5. 修改教育经历
-
-    修改 `_includes/resumer_03-education.html` 文件中内容
-
-6. 修改工作经历
-
-    修改 `_includes/resumer_04-experience.html` 文件中内容
-
-7. 修改获得证书
-
-	修改 `_includes/resumer_05-certification.html` 文件中内容
-
-8. 修改个人作品
-
-	修改 `_includes/resumer_06-personal_project.html` 文件中内容
-
-
-## 本地搭建
-
-在本地安装[Jekyll](https://jekyllrb.com/).
-然后在项目目录执行`jekyll s`命令,如下
+一般提交到 github 过个几十秒就可以看到效果，如果你需要对在本地查看效果需要安装 ruby 环境和依赖
 
 ```bash
-[root@localhost ~]# jekyll s
-Configuration file: C:/..../resume.io/_config.yml
-            Source: C:/..../resume.io
-       Destination: C:/..../resume.io/_site
- Incremental build: disabled. Enable with --incremental
-      Generating...
-                    done in 0.371 seconds.
-  Please add the following to your Gemfile to avoid polling for changes:
-    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
- Auto-regeneration: enabled for 'C:/..../resume.io'
-    Server address: http://127.0.0.1:4000/resume.io/
-  Server running... press ctrl-c to stop.
+# linux下需要gcc
+
+# gem sources --add https://gems.ruby-china.com/
+# gem sources --remove https://rubygems.org/
+# gem sources --remove https://mirrors.aliyun.com/rubygems/
+# gem sources -l
+gem install bundler
+# bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+bundle install
 ```
 
-然后可以访问[http://127.0.0.1:4000/resume.io/](http://127.0.0.1:4000/resume.io/)来访问本地的服务了。
+通过下面命令启动/编译项目
 
+```bash
+bundle exec jekyll serve --watch --host=127.0.0.1 --port=8080
+bundle exec jekyll build --destination=dist
+```
 
-## 在线预览
+如果需要替换代码高亮的样式可以通过下面的命令生成 css
 
-[非你莫属--个人简历模板](http://xiaodan_yu.gitee.io/resume.io)
+```bash
+rougify help style
+rougify style github > highlighting.css
+```
 
-## 截图预览
+# 项目配置
 
-![01.png](http://xiaodan_yu.gitee.io/resume.io/snapshot/11_01.png)
+1. 如果使用自己的域名，`CNAME`文件里的内容请换成你自己的域名，然后 CNAME 解析到`用户名.github.com`
 
-![02.png](http://xiaodan_yu.gitee.io/resume.io/snapshot/11_02.png)
+2. 如果使用 GitHub 的的域名，请删除`CNAME`文件,然后把你的项目修改为`用户名.github.io`
 
-![03.png](http://xiaodan_yu.gitee.io/resume.io/snapshot/11_03.png)
+3. 修改`pages/about.md`中关于我的内容
 
-![04.png](http://xiaodan_yu.gitee.io/resume.io/snapshot/11_04.png)
+4. 修改`_config.yml`文件，具体作用请参考注释
 
+5. 清空`post _posts`目录下所有文件，注意是清空，不是删除这两个目录
 
-## 参考
+6. 网站的 logo 和 favicon 放在了`static/img/`下，替换即可，大小无所谓，图片比例最好是 1:1
 
-本简历模板基于[Certy](http://sc.chinaz.com/moban/170307198220.htm)修改而来。保留了所有的样式，基于Jekyll重构了页面框架，并去掉了一些没有必要的内容，整合一页简历。
+7. 如果你是把项目 fork 过去的，想要删除我的提交记录可以先软重置到第一个提交，然后再提交一次，最后强制推送一次就行了
 
-## 开源协议
-[MIT](https://gitee.com/xiaodan_yu/resume.io/blob/master/LICENSE)
+# 使用
+
+文章放在`_posts`目录下，命名为`yyyy-MM-dd-xxxx-xxxx.md`，内容格式如下
+
+```yaml
+---
+layout: mypost
+title: 标题
+categories: [分类1, 分类2]
+---
+文章内容，Markdown格式
+```
+
+文章资源放在`posts`目录，如文章文件名是`2019-05-01-theme-usage.md`，则该篇文章的资源需要放在`posts/2019/05/01`下,在文章使用时直接引用即可。当然了，写作的时候会提示资源不存在忽略即可
+
+```md
+![这是图片](xxx.png)
+
+[xxx.zip 下载](xxx.zip)
+```
