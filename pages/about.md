@@ -12,7 +12,6 @@ title: 关于我
 
 - 熟悉 Java，NodeJs等语言
 
-- 能够使用 Git/SVN 对代码版本进行控制
 
 ## 联系我
 
